@@ -12,88 +12,89 @@
 </head>
 
 <body>
-    <h1> My Cake Recipe </h1>
-    <img src="
-    https://i0.wp.com/www.onceuponachef.com/images/2012/11/Vanilla-Birthday-Cake-18.jpg?resize=760%2C937&ssl=1">
-    <h2> Birthday Cake</h2>
-    <h3> Ingredients </h3>
-
-    <div class="amount">
-          <li> All purpose flour</li>
-        <div> 2 cups</div>
+    <div class="appbar">
+        <h1> My Cake Recipe </h1>
     </div>
+    <div class="content">
+        <img src="https://i0.wp.com/www.onceuponachef.com/images/2012/11/Vanilla-Birthday-Cake-18.jpg?resize=760%2C937&ssl=1">
+   
+    <div class="text">
+        <h2> Birthday Cake</h2>
+        <h3> Ingredients </h3>
+        <ul>
+            <li>
+                <div>
 
-    </u1>
-    <u1>
-        <div class="amount">
-                  <li> Baking powder</li>
-                  <div> 2 tsp</div>
+                    <div>All purpose flour</div>
+                    <div>433g</div>
+                </div>
+            </li>
+            <li>
+                <div>
+
+                    <div>Granulated Sugar</div>
+                    <div>2 cups</div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div>Vanilla Extract </div>
+                    <div>1 tbsp </div>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <div>Buttermilk</div>
+                    <div>360 ml</div>
+                </div>
+            </li>
+        </ul>
+        <h3> Steps </h3>
+            <ol>
+                <li> Position a rack in the middle of the oven and preheat to 350°F</li>
+                <li> Spray two 8-inch cake pans with nonstick cooking spray. </li>
+                <li> Using a handheld or stand mixer fitted with a paddle or whisk attachment, beat the butter and sugar
+                    together on high speed until smooth and creamy, about 3 minutes. </li>
+                <li> Pour batter evenly into cake pans.</li>
+                <li> Bake for around 23-26 minutes or until the cakes are baked through. To test for doneness, insert a
+                    toothpick into the center of the cake.</li>
+            </ol>
         </div>
-    </u1>
-
-    <h3> Steps </h3>
-    <div>
-        <ol class="steps"> 
-             <li> Position a rack in the middle of the oven and preheat to 350°F</li>
-             <li> Spray two 8-inch cake pans with nonstick cooking spray. </li>
-        </ol>
     </div>
-
-
 </body>
 
 <style>
     * {
         font-family: poppins;
-        background-color: aliceblue;
+        background-color:  aliceblue;
+        margin: 0;
+        padding: 0;
+        color: black;
     }
 
     * html,
     body {
-        padding: 0;
-        margin: 0;
-        border: 0;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 32px;
+
     }
 
     h1 {
         color: rgb(237, 100, 184);
-        text-align: left;
-        padding: 16px;
     }
 
-    h2 {
-        color: rgb(148, 57, 133);
-        text-align: left;
-        padding: 8px;
-        margin: 16px;
-        margin-top: 8px;
-        
-    }
-
+    h2,
     h3 {
-        color: black;
-        text-align: start;
         padding: 8px;
     }
 
-    .amount {
-        color: black;
-        margin-left: 16px;
-        margin-right: 16px;
-        padding: 2px;
+    .appbar {
+        padding: 16px;
         display: flex;
+        background-color: aliceblue);
         flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .steps {
-        color: black;
-        margin-left: 32px;
-        padding: 2px;
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    
+        align-items: center;
     }
 
     img {
@@ -102,4 +103,41 @@
         object-fit: cover;
         margin-bottom: 16px;
     }
+
+    ul li div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ol,
+    ul {
+        padding: 0 16px;
+        padding-left: 48px;
+    }
+
+    div.content,
+    div.text {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    @media only screen and (min-width: 600px) {
+        img {
+            object-fit: cover;
+            flex: 1;
+            width: 50vw;
+        }
+
+        div.content {
+            flex-direction: row;
+            width: 100vw;
+        }
+
+        div.text {
+            flex: 1;
+        }
+    }
 </style>
+
+</html>
